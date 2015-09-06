@@ -1,12 +1,13 @@
 import React from 'react';
 import Iso from 'iso';
-import BrowserHistory from 'react-router/lib/BrowserHistory';
+import createHistory from 'history/lib/createBrowserHistory';
 import { Router } from 'react-router';
 
 import alt from 'altInstance';
 import routes from 'routes.jsx';
 
-let history = new BrowserHistory();
+
+let history = createHistory();
 
 /*
  * Client side bootstrap with iso and alt

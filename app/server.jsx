@@ -1,7 +1,7 @@
 import Iso from 'iso';
 import React from 'react';
 import Router from 'react-router';
-import Location from 'react-router/lib/Location';
+import createLocation from 'history/lib/createLocation';
 
 import alt from 'altInstance';
 import routes from 'routes.jsx';
@@ -15,7 +15,7 @@ import html from 'base.html';
  */
 const renderToMarkup = (alt, state, req, res) => {
   let markup;
-  let location = new Location(req.path, req.query);
+  let location = createLocation(req.originalUrl);
   alt.bootstrap(state);
   Router.run(routes, location, (error, initialState, transition) => {
     if (transition.isCancelled) {
