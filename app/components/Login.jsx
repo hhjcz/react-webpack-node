@@ -50,7 +50,7 @@ export default class Login extends React.Component {
       } else {
         renderedResult = (
           <div className={styles.login__container}>
-            <h1 className={styles.login__header}>Email Login Demo</h1>
+            <h1 className={styles.login__header}>Email Login Demo - hhj</h1>
             <fieldset className={styles.login__fieldset}>
                 <input className={styles.login__input} type="email" ref="email" placeholder="email" />
                 <input className={styles.login__input} type="password" ref="password" placeholder="password" />
